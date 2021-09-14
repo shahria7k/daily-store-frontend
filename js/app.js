@@ -30,7 +30,7 @@ const showProducts = (products) => {
   }
 };
 let count = 0;
-const addToCart = (price) => {
+const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
   document.getElementById("total-Products").innerText = count;
@@ -115,7 +115,7 @@ const displaySingleProduct = (id, price) => {
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" onclick="addToCart(${price})" data-bs-dismiss="modal" aria-label="Close">Add To Cart</button>
+					<button type="button" class="btn btn-primary" onclick="addToCart(${parseFloat(id)},${price})" data-bs-dismiss="modal" aria-label="Close">Add To Cart</button>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
       `;
